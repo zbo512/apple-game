@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사과 게임</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <div class="start-box">
+      <div class="start-visual">
+        <img src="apple.png" alt="" class="start-reference" />
+      </div>
+      <p class="start-message">합해서 10을 만들어요!</p>
+      <button type="button" class="btn btn-start-page" id="btnStartPage">게임 시작</button>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <div class="top-bar">
+      <h1 class="title">사과 게임</h1>
+      <div class="score-wrap">
+        <span class="score-label">점수</span>
+        <span class="score" id="score">0</span>
+      </div>
+    </div>
+
+    <div class="main-area">
+      <div class="board-wrap" id="boardWrap">
+        <div class="board" id="board"></div>
+        <div class="selection-box" id="selectionBox"></div>
+      </div>
+      <div class="timer-wrap">
+        <div class="timer-header">
+          <span class="timer-label">남은 시간</span>
+        </div>
+        <div class="timer-bar-bg">
+          <div class="timer-bar" id="timerBar"></div>
+        </div>
+        <span class="timer-text" id="timerText">2:00</span>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <button type="button" class="btn btn-start" id="btnStart">Start</button>
+      <button type="button" class="btn btn-reset" id="btnReset">Reset</button>
+      <label class="option">
+        <input type="checkbox" id="lightColors" />
+        <span>Light Colors</span>
+      </label>
+      <label class="option">
+        <input type="checkbox" id="bgm" />
+        <span>BGM</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="game-over-overlay" id="gameOverOverlay">
+    <div class="game-over-apple">
+      <span class="game-over-stem"></span>
+      <span class="game-over-leaf"></span>
+      <div class="game-over-content">
+        <p class="game-over-label">Score</p>
+        <p class="final-score"><span id="finalScore">0</span></p>
+        <button type="button" class="btn btn-restart" id="btnRestart">다시 하기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
